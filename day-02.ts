@@ -1,11 +1,11 @@
-import { readFileSync } from 'node:fs';
-const input = readFileSync('input/day-02.txt', 'utf-8').split('\r\n');
+import { readFileSync } from "node:fs";
+const input = readFileSync("input/day-02.txt", "utf-8").split("\r\n");
 
 // Part 1
 let safeTotal1 = 0
 
 for (let report of input) {
-    const reportArray = report.split(' ').map(elem => parseInt(elem))
+    const reportArray = report.split(" ").map(elem => parseInt(elem))
     let reportIsSafe = true
     let reportIsAsc = false
     let reportIsDesc = false
@@ -79,7 +79,7 @@ const reportIsSafe = (reportArray, unsafeLevelRemoved) => {
 }
 
 for (let report of input) {
-    const reportArray = report.split(' ').map(elem => parseInt(elem))
+    const reportArray = report.split(" ").map(elem => parseInt(elem))
     if (reportIsSafe(reportArray, false)) {
         safeTotal2++
     }

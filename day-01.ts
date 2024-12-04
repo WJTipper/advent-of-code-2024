@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs';
-const input = readFileSync('input/day-01.txt', 'utf-8').split('\r\n');
+import { readFileSync } from "node:fs";
+const input = readFileSync("input/day-01.txt", "utf-8").split("\r\n");
 
 // Part 1
 const leftColumn: number[] = []
@@ -7,7 +7,7 @@ const rightColumn: number[] = []
 let result1 = 0
 
 for (let item of input) {
-    const splitItem = item.split('   ')
+    const splitItem = item.split("   ")
     leftColumn.push(parseInt(splitItem[0]))
     rightColumn.push(parseInt(splitItem[1]))
 }
